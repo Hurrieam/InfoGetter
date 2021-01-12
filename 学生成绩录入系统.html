@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>学生成绩录入系统</title>
+		<meta charset="utf-8">
+		<script type="text/javascript">
+			function add(){
+				//核心代码
+				var NAME = document.getElementById("studentName").value;
+				var GRADE = document.getElementById("grade").value;
+				document.getElementById("output").value += "\n" + NAME + "    " + GRADE + "\n";
+
+				//清空输入框，等待下一次用户输入
+				document.getElementById("studentName").value = "";
+				document.getElementById("grade").value = "";
+			}
+		</script>
+	</head>
+	<body>
+		<h1>学生成绩录入系统</h1>
+		<p>姓名</p>
+		<input type="text" id="studentName"><br>
+		<p>成绩</p>
+		<input type="text" id="grade">
+		<br><br><button id="btn_add" onclick="add()">添加</button><br><br>
+		<textarea style="height: 150px; width: 300px; " id="output">姓名    成绩</textarea>
+	</body>
+</html>
